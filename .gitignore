@@ -16,3 +16,4 @@
 /web/bundles/
 *.sh
 *.bat
+.idea
