@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="vagrant (1)" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;*.md;docs" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="Always" serverName="vagrant (1)" promptOnLocalOverwrite="false" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;*.md;docs" autoUploadExternalChanges="true">
     <serverData>
       <paths name="vagrant (1)">
         <serverdata>
