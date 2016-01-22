@@ -36,7 +36,7 @@ class VehicleController extends Controller
     /**
      * Creates a new Vehicle entity.
      *
-     * @Route("/new", name="_new")
+     * @Route("/samochod/nowy", name="_new")
      * @Method({"GET", "POST"})
      */
     public function newAction(Request $request)
@@ -62,7 +62,7 @@ class VehicleController extends Controller
     /**
      * Finds and displays a Vehicle entity.
      *
-     * @Route("/{id}", name="_show")
+     * @Route("/samochod/{id}", name="_show")
      * @Method("GET")
      */
     public function showAction(Vehicle $vehicle)
@@ -78,7 +78,7 @@ class VehicleController extends Controller
     /**
      * Displays a form to edit an existing Vehicle entity.
      *
-     * @Route("/{id}/edit", name="_edit")
+     * @Route("/samochod/{id}/edytujg", name="_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Request $request, Vehicle $vehicle)
@@ -105,7 +105,7 @@ class VehicleController extends Controller
     /**
      * Deletes a Vehicle entity.
      *
-     * @Route("/{id}", name="_delete")
+     * @Route("/samochod/{id}", name="_delete")
      * @Method("DELETE")
      */
     public function deleteAction(Request $request, Vehicle $vehicle)
