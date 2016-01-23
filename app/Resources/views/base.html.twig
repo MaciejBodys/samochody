@@ -1,3 +1,137 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+    <!-- Place favicon.ico in the root directory -->
+
+    <title>Blog - Canvas - A Free Website Template by Donny Burnside</title>
+
+    <link media="all" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link media="all" type="text/css" href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link media="all" type="text/css" href="{{ asset('css/core.css') }}" rel="stylesheet">
+    <link media="all" type="text/css" href="{{ asset('css/skins/blue.css') }}" rel="stylesheet">
+    <link media="all" type="text/css" href="{{ asset('css/custom.css') }}" rel="stylesheet">
+</head>
+<body class="blog" itemscope itemtype="http://schema.org/Blog">
+
+<div id="masthead">
+
+    <div id="site-header" role="banner">
+        <div class="container">
+            <div class="row">
+
+                <div id="branding">
+                    <a class="logo" href="{{ path('_index') }}">Strona główna</a>
+                </div> <!-- #branding -->
+
+                <nav id="main-menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+                    <ul class="horizontal-navigation">
+                            <li><a href="">Dodaj pojazd</a></li>
+                            <li><a href="">Zamówienia</a></li>
+                            <li><a href="">Wyloguj</a></li>
+                            <li><a href="">Zaloguj</a></li>
+                            <li><a href="">Zarejestruj</a></li>
+
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                            <li class="menu-about" itemprop="url"><a href="{{ path('zamowienia_index') }}" title="About" itemprop="name">Moje zamówienia</a></li>
+                            <li class="menu-portfolio" itemprop="url"><a href="{{ path('fos_user_security_logout') }}" title="" itemprop="name">Wyloguj</a></li>
+                        {% else %}
+                            <li class="menu-blog active" itemprop="url"><a href="{{ path('fos_user_security_login') }}" title="Blog" itemprop="name">Zaloguj do serwisu</a></li>
+                            <li class="menu-contact" itemprop="url"><a href="{{ path('fos_user_registration_register') }}" title="Contact" itemprop="name">Zarejestruj </a></li>
+                        {% endif %}
+                    </ul>
+                </nav> <!-- #main-menu -->
+
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+    </div> <!-- #site-header -->
+
+    <div id="page-title">
+        <div class="container">
+            <div class="row">
+
+                <h1 class="entry-title" itemprop="headline">Wypożyczalnia samochodów - Body & Szlęk</h1>
+                <p class="description" itemprop="description">Tani, szybko, profesjonalnie</p>
+
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+    </div> <!-- #page-title -->
+
+</div> <!-- #masthead -->
+
+<main id="content" role="main">
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+
+                <div class="three-quarters-block">
+                    <div class="content">
+
+                        {% block body %}{% endblock %}
+
+                    </div> <!-- .content -->
+                </div> <!-- .three-quarters-block -->
+
+                <div class="one-quarter-block" role="complementary">
+                    <div class="sidebar">
+
+                        <div class="search-widget widget">
+                            <form class="widget-form" action="#" method="get" role="search">
+                                <label>
+                                    <span class="screen-reader-text">Search this website:</span>
+                                    <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="search" title="Search" />
+                                </label>
+                                <button><i class="fa fa-search"></i></button>
+                            </form>
+                        </div> <!-- .search.widget -->
+
+                        <div class="widget">
+                            <h3 class="widget-title">Panel{{ app.user?' - ' ~ app.user:'' }}</h3>
+                            <ul>
+                                {% if is_granted("ROLE_ADMIN") %}
+                                    <li><a href="{{ path('_new') }}">Dodaj pojazd</a></li>
+                                {% endif %}
+                                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                <li><a href="{{ path('zamowienia_index') }}">Zamówienia</a></li>
+                                <li><a href="{{ path('fos_user_security_logout') }}">Wyloguj</a></li>
+                                {% else %}
+                                <li><a href="{{ path('fos_user_security_login') }}">Zaloguj</a></li>
+                                <li><a href="{{ path('fos_user_registration_register') }}">Zarejestruj</a></li>
+                                {% endif %}
+                            </ul>
+                        </div> <!-- .widget -->
+
+                    </div> <!-- .sidebar -->
+                </div> <!-- .one-quarter-block -->
+
+            </div> <!-- .row -->
+        </div> <!-- .container -->
+    </div> <!-- .section -->
+
+</main> <!-- #content -->
+
+<footer id="footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+
+            <div class="copyright">&copy; Maciej Bodys & Andrzej Szlęk 2016</div>
+
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+</footer> <!-- #footer -->
+
+<!-- Scripts -->
+<script type="text/javascript" src="{{ asset('js/jquery-1.11.2.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
+{% block javascripts %}{% endblock %}
+</body>
+</html>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,7 +141,6 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
     </body>
 </html>
