@@ -62,6 +62,12 @@ class Vehicle
      * @ORM\Column(name="price", type="decimal", precision=10, scale=2)
      */
     private $price;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="photo", type="string")
+     */
+    private $photoUrl;
 
 
     /**
@@ -216,6 +222,22 @@ class Vehicle
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhotoUrl()
+    {
+        return $this->photoUrl;
+    }
+
+    /**
+     * @param string $photoUrl
+     */
+    public function setPhotoUrl($photoUrl)
+    {
+        $this->photoUrl = $photoUrl;
     }
 }
 

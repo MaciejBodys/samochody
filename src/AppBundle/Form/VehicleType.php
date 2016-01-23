@@ -15,12 +15,36 @@ class VehicleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('engine')
-            ->add('brand')
-            ->add('year')
-            ->add('amount')
-            ->add('price')
+            ->add('name', null, [
+                    'label' => false,
+                    'attr' => ['placeholder' => 'Nazwa pojazdu']
+                ]
+            )
+            ->add('photoUrl', null, [
+                    'label' => false,
+                    'attr' => ['placeholder' => 'Podaj adres ULL obrazka']
+                ]
+            )
+            ->add('brand', null, [
+                'label' => false,
+                'attr' => ['placeholder' => 'Marka pojazdu']
+            ])
+            ->add('engine', null, [
+                'label' => false,
+                'attr' => ['placeholder' => 'Moc silnika']
+            ])
+            ->add('year', null, [
+                'label' => false,
+                'attr' => ['placeholder' => 'Rok produkcji']
+            ])
+            ->add('amount', null, [
+                'label' => false,
+                'attr' => ['placeholder' => 'Ilość dostępnych pojazdów']
+            ])
+            ->add('price', null, [
+                'label' => false,
+                'attr' => ['placeholder' => 'Koszt wynajmu (jeden dzień)']
+            ])
         ;
     }
     

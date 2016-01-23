@@ -505,6 +505,8 @@ input[type="search"],
 input[type="email"],
 input[type="tel"],
 input[type="date"],
+input[type="number"],
+input[type="password"],
 textarea {
 	width:100%;
 	padding:16px;

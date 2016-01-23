@@ -1,49 +1,69 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Vehicle list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Engine</th>
-                <th>Brand</th>
-                <th>Year</th>
-                <th>Amount</th>
-                <th>Price</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
         {% for vehicle in vehicles %}
-            <tr>
-                <td><a href="{{ path('_show', { 'id': vehicle.id }) }}">{{ vehicle.id }}</a></td>
-                <td>{{ vehicle.name }}</td>
-                <td>{{ vehicle.engine }}</td>
-                <td>{{ vehicle.brand }}</td>
-                <td>{{ vehicle.year }}</td>
-                <td>{{ vehicle.amount }}</td>
-                <td>{{ vehicle.price }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('_show', { 'id': vehicle.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('_edit', { 'id': vehicle.id }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            <article class="post summary hentry" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 
-    <ul>
-        <li>
-            <a href="{{ path('_new') }}">Create a new entry</a>
-        </li>
-    </ul>
+                <header class="entry-header">
+
+                    <h2 class="entry-title" itemprop="headline"><a href="article.html" title="Article Title" rel="bookmark" itemprop="url">Article Title</a></h2>
+
+                    <div class="entry-meta">
+
+										<span class="post-date">
+											<i class="fa fa-clock-o fa-fw"></i> <span class="updated">12th February 2015</span>
+										</span> <!-- .post-date -->
+
+										<span class="post-author">
+											<i class="fa fa-user fa-fw"></i> Written by <span class="vcard"><a class="fn url" href="author.html">Author</a></span>
+										</span> <!-- .post-author -->
+
+										<span class="post-categories">
+											<i class="fa fa-folder fa-fw"></i> <a href="blog.html" rel="tag">Category A</a>, <a href="blog.html" rel="tag">Category B</a>
+										</span> <!-- .post-categories -->
+
+										<span class="post-tags">
+											<i class="fa fa-tags fa-fw"></i> <a href="blog.html" rel="tag">Tag A</a>, <a href="blog.html" rel="tag">Tag B</a>, <a href="blog.html" rel="tag">Tag C</a>
+										</span> <!-- .post-tags -->
+
+                    </div> <!-- .entry-meta -->
+
+                </header> <!-- .entry-header -->
+
+                <div class="entry-thumbnail">
+                    <a href="article.html" title="Blog Post">
+                        <img src="http://dummyimage.com/150x150/f3f3f3/d1d1d1.jpg&text=Thumbnail" alt="Blog Post" itemprop="image">
+                    </a>
+                </div> <!-- .entry-thumbnail -->
+
+                <div class="entry-summary" itemprop="articleBody">
+
+                    <p>Lorem ipsum dolor sit amet, orci a faucibus, ante curabitur augue ornare nulla facilisi bibendum, tortor felis quam rutrum velit, pretium posuere placerat. Vitae ut nulla eget. Lacus sociis, eget dolor metus nam nunc leo. Tempor eget donec officia. Luctus nullam purus urna iaculis, integer dui risus, ultricies lacinia aliquet.</p>
+                    <a class="more button" href="article.html">Read More</a>
+
+                </div> <!-- .entry-summary -->
+
+            </article> <!-- .post.summary -->
+            {#<tr>#}
+                {#<td><a href="{{ path('_show', { 'id': vehicle.id }) }}">{{ vehicle.id }}</a></td>#}
+                {#<td>{{ vehicle.name }}</td>#}
+                {#<td>{{ vehicle.engine }}</td>#}
+                {#<td>{{ vehicle.brand }}</td>#}
+                {#<td>{{ vehicle.year }}</td>#}
+                {#<td>{{ vehicle.amount }}</td>#}
+                {#<td>{{ vehicle.price }}</td>#}
+                {#<td>#}
+                    {#<ul>#}
+                        {#<li>#}
+                            {#<a href="{{ path('_show', { 'id': vehicle.id }) }}">show</a>#}
+                        {#</li>#}
+                        {#<li>#}
+                            {#<a href="{{ path('_edit', { 'id': vehicle.id }) }}">edit</a>#}
+                        {#</li>#}
+                    {#</ul>#}
+                {#</td>#}
+            {#</tr>#}
+        {% endfor %}
+
 {% endblock %}
