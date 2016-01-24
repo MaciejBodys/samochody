@@ -56,7 +56,7 @@ class HireController extends Controller
 
         $em->flush();
 
-        $this->addFlash('succes', 'Pomyślnie dodałeś nowy pojazd');
+        $this->addFlash('Sukces', 'Pomyślnie złożyłeś zlecenie o wypożyczenie pojazd');
 
         return $this->redirectToRoute('zamowienia_index');
     }

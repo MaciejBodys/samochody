@@ -49,6 +49,7 @@ class VehicleController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($vehicle);
             $em->flush();
+            $this->addFlash('Sukces', 'Pomyślnie dodałeś nowy pojazd');
 
             return $this->redirectToRoute('_show', array('id' => $vehicle->getId()));
         }
@@ -91,7 +92,7 @@ class VehicleController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($vehicle);
             $em->flush();
-
+            $this->addFlash('Sukces', 'Pomyślnie zmodyfikowałeś dane pojazdu');
             return $this->redirectToRoute('_edit', array('id' => $vehicle->getId()));
         }
 
@@ -114,6 +115,7 @@ class VehicleController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $this->addFlash('Sukces', 'Pomyślnie usunięto');
             $em = $this->getDoctrine()->getManager();
             $em->remove($vehicle);
             $em->flush();

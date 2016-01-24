@@ -47,58 +47,18 @@
                     <p> Zaloguj/Zarejestruj się aby móc wypożyczać </p>
                 {% endif %}
 
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a class=" button" href="{{ path('_edit', { 'id': vehicle.id }) }}">EDYTUJ POJAZD</a>
+                    {{ form_start(delete_form, {'attr': {'style': 'display:inline-block'}}) }}
+                        <button type=submit class="danger button" href="javascript:void(0)">USUŃ POJAZD</button>
+                    {{ form_end(delete_form) }}
+
+                {% endif %}
             </div> <!-- .entry-content -->
 
         </article> <!-- .post -->
 
     </div>
-
-    {#<table>#}
-        {#<tbody>#}
-            {#<tr>#}
-                {#<th>Id</th>#}
-                {#<td>{{ vehicle.id }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Name</th>#}
-                {#<td></td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Engine</th>#}
-                {#<td></td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Brand</th>#}
-                {#<td>{{ vehicle.brand }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Year</th>#}
-                {#<td>{{ vehicle.year }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Amount</th>#}
-                {#<td>{{ vehicle.amount }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Price</th>#}
-                {#<td>{{ vehicle.price }}</td>#}
-            {#</tr>#}
-        {#</tbody>#}
-    {#</table>#}
-
-    {#<ul>#}
-        {#<li>#}
-            {#<a href="{{ path('_index') }}">Back to the list</a>#}
-        {#</li>#}
-        {#<li>#}
-            {#<a href="{{ path('_edit', { 'id': vehicle.id }) }}">Edit</a>#}
-        {#</li>#}
-        {#<li>#}
-            {#{{ form_start(delete_form) }}#}
-                {#<input type="submit" value="Delete">#}
-            {#{{ form_end(delete_form) }}#}
-        {#</li>#}
-    {#</ul>#}
 
 
 {% endblock %}

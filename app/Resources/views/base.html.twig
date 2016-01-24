@@ -55,11 +55,23 @@
                 {% if app.request.hasPreviousSession %}
                     {% for type, messages in app.session.flashbag.all() %}
                         {% for message in messages %}
-                            <div class="flash-{{ type }}">
-                                {{ message }}
+                            <div id="openModal" class="modalDialog">
+                                <div>
+                                    <a href="#close" title="Close" class="close">X</a>
+                                    <h2 class="{{ type }}">{{ type }}</h2>
+                                    <p>{{ message }}</p>
+                                </div>
                             </div>
                         {% endfor %}
+                        {% if loop.index0 == 0%}
+                            <script>
+                            document.location.hash = 'openModal';
+
+                            setTimeout(function(){ document.location.hash = 'close'}, 1500);
+                            </script>
+                        {% endif %}
                     {% endfor %}
+
                 {% endif %}
             </div> <!-- .row -->
         </div> <!-- .container -->
