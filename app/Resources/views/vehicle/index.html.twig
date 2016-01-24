@@ -8,7 +8,8 @@
                 <header class="entry-header">
 
                     <h2 class="entry-title" itemprop="headline">
-                        <a href="article.html" title="Article Title" rel="bookmark" itemprop="url">{{ vehicle.name }}</a></h2>
+                        <a href="{{ path('_show', {'id': vehicle.id}) }}" title="Article Title" rel="bookmark" itemprop="url">
+                            {{ vehicle.name }}</a></h2>
 
                     <div class="entry-meta">
 
@@ -43,7 +44,7 @@
                 <div class="entry-summary" itemprop="articleBody">
 
                     <p>{{ vehicle.description }}</p>
-                    <a class="more button" href="article.html">Read More</a>
+                    <a class="more button" href="{{ path('_show', {'id': vehicle.id}) }}">PRZEJDŹ DO SZCZEGÓŁÓW</a>
 
                 </div> <!-- .entry-summary -->
 

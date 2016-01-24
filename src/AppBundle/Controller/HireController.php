@@ -35,14 +35,29 @@ class HireController extends Controller
     /**
      * Finds and displays a Hire entity.
      *
-     * @Route("/{id}", name="zamowienia_show")
+     * @Route("/{car}", name="zamowienia_hire")
      * @Method("GET")
+     * @param $car
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
      */
-    public function showAction(Hire $hire)
+    public function hireAction($car)
     {
 
-        return $this->render('hire/show.html.twig', array(
-            'hire' => $hire,
-        ));
+        $hire = new Hire();
+
+        $hire->setUser($this->getUser());
+        $hire->setStatus('ROZPOCZĘTE');
+        $hire->setCar($car);
+
+
+        $em = $this->getDoctrine()->getManager();
+
+        $em->persist($hire);
+
+        $em->flush();
+
+        $this->addFlash('succes', 'Pomyślnie dodałeś nowy pojazd');
+
+        return $this->redirectToRoute('zamowienia_index');
     }
 }
