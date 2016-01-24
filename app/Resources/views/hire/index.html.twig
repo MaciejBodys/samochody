@@ -1,38 +1,51 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Lista zamówień{% endblock %}
 {% block body %}
-    <h1>Hire list</h1>
 
-    <table>
-        <thead>
+    <div class="CSSTableGenerator" >
+        <table >
             <tr>
-                <th>Id</th>
-                <th>Date</th>
-                <th>User</th>
-                <th>Car</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <td>
+ID
+                </td>
+                <td >
+DATA ZAMÓWIENIA
+                </td>
+                <td>
+UŻYTKOWNIK
+                </td>
+                <td>
+SAMOCHÓD
+                </td>
+                <td>
+STATUS ZAMÓWIENIA
+                </td>
+                {% if is_granted("ROLE_ADMIN") %}
+                <td>
+            AKCJE
+                </td>
+                {% endif %}
             </tr>
-        </thead>
-        <tbody>
+
+
         {% for hire in hires %}
             <tr>
-                <td><a href="{{ path('zamowienia_show', { 'id': hire.id }) }}">{{ hire.id }}</a></td>
+                {#<td><a href="{{ path('zamowienia_show', { 'id': hire.id }) }}">{{ hire.id }}</a></td>#}
+                <td>{{ hire.id }}</td>
                 <td>{% if hire.date %}{{ hire.date|date('Y-m-d H:i:s') }}{% endif %}</td>
                 <td>{{ hire.user }}</td>
                 <td>{{ hire.car }}</td>
                 <td>{{ hire.status }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('zamowienia_show', { 'id': hire.id }) }}">show</a>
-                        </li>
-                    </ul>
-                </td>
+                {% if is_granted("ROLE_ADMIN") %}
+                    <td>
+                        AKCJE
+                    </td>
+                {% endif %}
             </tr>
         {% endfor %}
-        </tbody>
-    </table>
 
+        </table>
+    </div>
     
 {% endblock %}
