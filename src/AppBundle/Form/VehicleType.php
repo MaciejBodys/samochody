@@ -3,6 +3,8 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -20,9 +22,14 @@ class VehicleType extends AbstractType
                     'attr' => ['placeholder' => 'Nazwa pojazdu']
                 ]
             )
-            ->add('photoUrl', null, [
+            ->add('photoUrl', UrlType::class, [
                     'label' => false,
-                    'attr' => ['placeholder' => 'Podaj adres ULL obrazka']
+                    'attr' => ['placeholder' => 'Podaj adres URL obrazka']
+                ]
+            )
+            ->add('description', TextareaType::class, [
+                    'label' => false,
+                    'attr' => ['placeholder' => 'Podaj opis produktu']
                 ]
             )
             ->add('brand', null, [

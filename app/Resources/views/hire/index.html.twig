@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Hire list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Date</th>
+                <th>User</th>
+                <th>Car</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hire in hires %}
+            <tr>
+                <td><a href="{{ path('zamowienia_show', { 'id': hire.id }) }}">{{ hire.id }}</a></td>
+                <td>{% if hire.date %}{{ hire.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ hire.user }}</td>
+                <td>{{ hire.car }}</td>
+                <td>{{ hire.status }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('zamowienia_show', { 'id': hire.id }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

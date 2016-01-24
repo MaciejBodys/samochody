@@ -57,6 +57,13 @@ class Vehicle
     private $amount;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="created", type="datetime")
+     */
+    private $created;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="price", type="decimal", precision=10, scale=2)
@@ -68,6 +75,18 @@ class Vehicle
      * @ORM\Column(name="photo", type="string")
      */
     private $photoUrl;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string")
+     */
+    private $description;
+
+    public function __construct()
+    {
+        $this->created = new \DateTime();
+    }
 
 
     /**
@@ -200,6 +219,7 @@ class Vehicle
         return $this->amount;
     }
 
+
     /**
      * Set price
      *
@@ -238,6 +258,38 @@ class Vehicle
     public function setPhotoUrl($photoUrl)
     {
         $this->photoUrl = $photoUrl;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * @param int $created
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
     }
 }
 

@@ -507,6 +507,7 @@ input[type="tel"],
 input[type="date"],
 input[type="number"],
 input[type="password"],
+input[type="url"],
 textarea {
 	width:100%;
 	padding:16px;

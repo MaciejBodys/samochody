@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Hire</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ hire.id }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{% if hire.date %}{{ hire.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>User</th>
+                <td>{{ hire.user }}</td>
+            </tr>
+            <tr>
+                <th>Car</th>
+                <td>{{ hire.car }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ hire.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('zamowienia_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
