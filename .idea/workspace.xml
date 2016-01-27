@@ -4,11 +4,10 @@
     <list default="true" id="f09f992c-b8e2-4d12-9520-14b46778c3f1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/vehicle/edit.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/vehicle/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/vehicle/show.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/vehicle/show.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/hire/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/hire/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/HireController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/HireController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/VehicleController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/VehicleController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/custom.css" afterPath="$PROJECT_DIR$/web/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Form/VehicleType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/VehicleType.php" />
     </list>
     <ignored path="bodys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,112 +36,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Vehicle.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php">
+      <file leaf-file-name="VehicleController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/VehicleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            <state vertical-scroll-proportion="-4.8">
+              <caret line="61" column="72" selection-start-line="61" selection-start-column="72" selection-end-line="61" selection-end-column="72" />
               <folding>
-                <element signature="e#883#967#0#PHP" expanded="true" />
-                <element signature="e#994#1080#0#PHP" expanded="true" />
-                <element signature="e#1108#1217#0#PHP" expanded="true" />
-                <element signature="e#1242#1327#0#PHP" expanded="true" />
-                <element signature="e#1356#1447#0#PHP" expanded="true" />
-                <element signature="e#1479#1562#0#PHP" expanded="true" />
-                <element signature="e#1625#1686#0#PHP" expanded="true" />
-                <element signature="e#1788#1882#0#PHP" expanded="true" />
-                <element signature="e#1949#2014#0#PHP" expanded="true" />
-                <element signature="e#2120#2222#0#PHP" expanded="true" />
-                <element signature="e#2291#2360#0#PHP" expanded="true" />
-                <element signature="e#2464#2562#0#PHP" expanded="true" />
-                <element signature="e#2630#2697#0#PHP" expanded="true" />
-                <element signature="e#2800#2894#0#PHP" expanded="true" />
-                <element signature="e#2958#3023#0#PHP" expanded="true" />
-                <element signature="e#3130#3232#0#PHP" expanded="true" />
-                <element signature="e#3298#3367#0#PHP" expanded="true" />
-                <element signature="e#3374#3467#0#PHP" expanded="true" />
-                <element signature="e#3472#3570#0#PHP" expanded="true" />
-                <element signature="e#3638#3705#0#PHP" expanded="true" />
-                <element signature="e#3749#3822#0#PHP" expanded="true" />
-                <element signature="e#3828#3870#0#PHP" expanded="true" />
-                <element signature="e#3875#3962#0#PHP" expanded="true" />
-                <element signature="e#3968#3998#0#PHP" expanded="true" />
-                <element signature="e#4003#4074#0#PHP" expanded="true" />
-                <element signature="e#4080#4118#0#PHP" expanded="true" />
-                <element signature="e#4123#4206#0#PHP" expanded="true" />
-                <element signature="e#4212#4245#0#PHP" expanded="true" />
-                <element signature="e#4250#4329#0#PHP" expanded="true" />
-                <element signature="e#4335#4380#0#PHP" expanded="true" />
-                <element signature="e#4385#4484#0#PHP" expanded="true" />
+                <element signature="e#328#376#0#PHP" expanded="true" />
+                <element signature="e#426#624#0#PHP" expanded="true" />
+                <element signature="e#629#1450#0#PHP" expanded="true" />
+                <element signature="e#771#790#1#PHP" expanded="true" />
+                <element signature="e#883#902#1#PHP" expanded="true" />
+                <element signature="e#1287#1306#1#PHP" expanded="true" />
+                <element signature="e#1362#1387#0#PHP" expanded="true" />
+                <element signature="e#1456#1588#0#PHP" expanded="true" />
+                <element signature="e#2100#2107#0#PHP" expanded="true" />
+                <element signature="e#2184#2207#0#PHP" expanded="true" />
+                <element signature="e#2317#2447#0#PHP" expanded="true" />
+                <element signature="e#2452#2731#0#PHP" expanded="true" />
+                <element signature="e#2590#2614#0#PHP" expanded="true" />
+                <element signature="e#2737#2900#0#PHP" expanded="true" />
+                <element signature="e#2905#3753#0#PHP" expanded="true" />
+                <element signature="e#3476#3483#0#PHP" expanded="true" />
+                <element signature="e#3560#3584#0#PHP" expanded="true" />
+                <element signature="e#3759#3883#0#PHP" expanded="true" />
+                <element signature="e#3888#4348#0#PHP" expanded="true" />
+                <element signature="e#4332#4340#1#PHP" expanded="true" />
+                <element signature="e#4354#4532#0#PHP" expanded="true" />
+                <element signature="e#4537#4799#0#PHP" expanded="true" />
+                <element signature="e#4680#4689#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/vehicle/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.1538463">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-              <folding>
-                <element signature="e#1679#1694#0#Twig" expanded="true" />
-                <element signature="e#1970#1975#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/vehicle/edit.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.50506514">
-              <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
-              <folding>
-                <element signature="e#1282#1288#0#Twig" expanded="true" />
-                <element signature="e#1686#1702#0#Twig" expanded="true" />
-                <element signature="e#1852#1876#0#Twig" expanded="true" />
-                <element signature="e#2050#2073#0#Twig" expanded="true" />
-                <element signature="e#2223#2253#0#Twig" expanded="true" />
-                <element signature="e#5376#5380#0#Twig" expanded="true" />
-                <element signature="e#5590#5606#0#Twig" expanded="true" />
-                <element signature="e#5687#5711#0#Twig" expanded="true" />
-                <element signature="e#5832#5855#0#Twig" expanded="true" />
-                <element signature="e#5933#5963#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/vehicle/new.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/custom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.5272727">
-              <caret line="446" column="8" selection-start-line="446" selection-start-column="8" selection-end-line="446" selection-end-column="8" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -150,35 +73,52 @@
       <file leaf-file-name="HireController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HireController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-28.115385">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state vertical-scroll-proportion="-15.923077">
+              <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
               <folding>
                 <element signature="e#350#466#0#PHP" expanded="true" />
-                <element signature="e#471#733#0#PHP" expanded="true" />
-                <element signature="e#739#953#0#PHP" expanded="true" />
-                <element signature="e#1371#1389#1#PHP" expanded="true" />
+                <element signature="e#471#907#0#PHP" expanded="true" />
+                <element signature="e#644#660#1#PHP" expanded="true" />
+                <element signature="e#731#747#1#PHP" expanded="true" />
+                <element signature="e#913#1127#0#PHP" expanded="true" />
+                <element signature="e#1132#1571#0#PHP" expanded="true" />
+                <element signature="e#1545#1563#1#PHP" expanded="true" />
+                <element signature="e#1577#1835#0#PHP" expanded="true" />
+                <element signature="e#2125#2143#1#PHP" expanded="true" />
+                <element signature="e#2156#2420#0#PHP" expanded="true" />
+                <element signature="e#2425#2718#0#PHP" expanded="true" />
+                <element signature="e#2692#2710#1#PHP" expanded="true" />
+                <element signature="e#2723#2987#0#PHP" expanded="true" />
+                <element signature="e#2992#3286#0#PHP" expanded="true" />
+                <element signature="e#3260#3278#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/VehicleController.php">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/hire/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923">
-              <caret line="117" column="60" selection-start-line="117" selection-start-column="60" selection-end-line="117" selection-end-column="60" />
+            <state vertical-scroll-proportion="-8.730769">
+              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
               <folding>
-                <element signature="e#328#376#0#PHP" expanded="true" />
-                <element signature="e#426#535#0#PHP" expanded="true" />
-                <element signature="e#540#817#0#PHP" expanded="true" />
-                <element signature="e#666#685#1#PHP" expanded="true" />
-                <element signature="e#823#955#0#PHP" expanded="true" />
-                <element signature="e#960#1658#0#PHP" expanded="true" />
-                <element signature="e#1664#1794#0#PHP" expanded="true" />
-                <element signature="e#2084#2247#0#PHP" expanded="true" />
-                <element signature="e#2252#3081#0#PHP" expanded="true" />
-                <element signature="e#3087#3211#0#PHP" expanded="true" />
-                <element signature="e#3682#3860#0#PHP" expanded="true" />
+                <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#1124#1141#0#Twig" expanded="true" />
+                <element signature="e#1222#1242#0#Twig" expanded="true" />
+                <element signature="e#1326#1346#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VehicleType.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/VehicleType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.73194444">
+              <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+              <folding>
+                <element signature="e#342#426#0#PHP" expanded="true" />
+                <element signature="e#2165#2341#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -187,12 +127,35 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/vehicle/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            <state vertical-scroll-proportion="-12.423077">
+              <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
                 <element signature="e#323#328#0#Twig" expanded="true" />
                 <element signature="e#1974#1979#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.6153846">
+              <caret line="59" column="72" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
+              <folding>
+                <element signature="e#1282#1288#0#Twig" expanded="true" />
+                <element signature="e#1686#1702#0#Twig" expanded="true" />
+                <element signature="e#1852#1876#0#Twig" expanded="true" />
+                <element signature="e#2050#2073#0#Twig" expanded="true" />
+                <element signature="e#2223#2253#0#Twig" expanded="true" />
+                <element signature="e#4596#4602#0#Twig" expanded="true" />
+                <element signature="e#5367#5373#0#Twig" expanded="true" />
+                <element signature="e#5528#5532#0#Twig" expanded="true" />
+                <element signature="e#5742#5758#0#Twig" expanded="true" />
+                <element signature="e#5895#5919#0#Twig" expanded="true" />
+                <element signature="e#6040#6063#0#Twig" expanded="true" />
+                <element signature="e#6141#6171#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -219,18 +182,18 @@
         <option value="$PROJECT_DIR$/web/app_dev.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/vehicle/new.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Form/VehicleType.php" />
         <option value="$PROJECT_DIR$/web/css/core.css" />
-        <option value="$PROJECT_DIR$/app/Resources/views/hire/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/vehicle/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Hire.php" />
         <option value="$PROJECT_DIR$/app/Resources/views/vehicle/show.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/vehicle/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/HireController.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/VehicleController.php" />
         <option value="$PROJECT_DIR$/web/css/custom.css" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/HireController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/hire/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/VehicleController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/VehicleType.php" />
       </list>
     </option>
   </component>
@@ -394,7 +357,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
+              <option name="myItemId" value="Form" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -803,16 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/VehicleType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.769231">
-          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-          <folding>
-            <element signature="e#1917#2093#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/css/core.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2888889">
@@ -827,16 +780,6 @@
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#12#28#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/hire/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.425">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -867,18 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/vehicle/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="e#323#328#0#Twig" expanded="true" />
-            <element signature="e#1974#1979#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/vehicle/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.1538463">
@@ -890,9 +821,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/skins/blue.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.615385">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/vehicle/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.230769">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5272727">
+          <caret line="446" column="8" selection-start-line="446" selection-start-column="8" selection-end-line="446" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/vehicle/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33055556">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Vehicle.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
+        <state vertical-scroll-proportion="0.16527778">
           <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
           <folding>
             <element signature="e#883#967#0#PHP" expanded="true" />
@@ -930,90 +897,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/skins/blue.css">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/vehicle/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.615385">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/VehicleController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="117" column="60" selection-start-line="117" selection-start-column="60" selection-end-line="117" selection-end-column="60" />
-          <folding>
-            <element signature="e#328#376#0#PHP" expanded="true" />
-            <element signature="e#426#535#0#PHP" expanded="true" />
-            <element signature="e#540#817#0#PHP" expanded="true" />
-            <element signature="e#666#685#1#PHP" expanded="true" />
-            <element signature="e#823#955#0#PHP" expanded="true" />
-            <element signature="e#960#1658#0#PHP" expanded="true" />
-            <element signature="e#1664#1794#0#PHP" expanded="true" />
-            <element signature="e#2084#2247#0#PHP" expanded="true" />
-            <element signature="e#2252#3081#0#PHP" expanded="true" />
-            <element signature="e#3087#3211#0#PHP" expanded="true" />
-            <element signature="e#3682#3860#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/vehicle/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="22" column="53" selection-start-line="22" selection-start-column="53" selection-end-line="22" selection-end-column="53" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5272727">
-          <caret line="446" column="8" selection-start-line="446" selection-start-column="8" selection-end-line="446" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/vehicle/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HireController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.115385">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#350#466#0#PHP" expanded="true" />
-            <element signature="e#471#733#0#PHP" expanded="true" />
-            <element signature="e#739#953#0#PHP" expanded="true" />
-            <element signature="e#1371#1389#1#PHP" expanded="true" />
+            <element signature="e#323#328#0#Twig" expanded="true" />
+            <element signature="e#1974#1979#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50506514">
-          <caret line="71" column="35" selection-start-line="71" selection-start-column="35" selection-end-line="71" selection-end-column="35" />
+        <state vertical-scroll-proportion="-6.6153846">
+          <caret line="59" column="72" selection-start-line="59" selection-start-column="72" selection-end-line="59" selection-end-column="72" />
           <folding>
             <element signature="e#1282#1288#0#Twig" expanded="true" />
             <element signature="e#1686#1702#0#Twig" expanded="true" />
             <element signature="e#1852#1876#0#Twig" expanded="true" />
             <element signature="e#2050#2073#0#Twig" expanded="true" />
             <element signature="e#2223#2253#0#Twig" expanded="true" />
-            <element signature="e#5376#5380#0#Twig" expanded="true" />
-            <element signature="e#5590#5606#0#Twig" expanded="true" />
-            <element signature="e#5687#5711#0#Twig" expanded="true" />
-            <element signature="e#5832#5855#0#Twig" expanded="true" />
-            <element signature="e#5933#5963#0#Twig" expanded="true" />
+            <element signature="e#4596#4602#0#Twig" expanded="true" />
+            <element signature="e#5367#5373#0#Twig" expanded="true" />
+            <element signature="e#5528#5532#0#Twig" expanded="true" />
+            <element signature="e#5742#5758#0#Twig" expanded="true" />
+            <element signature="e#5895#5919#0#Twig" expanded="true" />
+            <element signature="e#6040#6063#0#Twig" expanded="true" />
+            <element signature="e#6141#6171#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/hire/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.730769">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#1124#1141#0#Twig" expanded="true" />
+            <element signature="e#1222#1242#0#Twig" expanded="true" />
+            <element signature="e#1326#1346#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3513889">
+          <caret line="280" column="23" selection-start-line="280" selection-start-column="23" selection-end-line="280" selection-end-column="23" />
+          <folding>
+            <element signature="e#9686#9860#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/HireController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.923077">
+          <caret line="80" column="35" selection-start-line="80" selection-start-column="35" selection-end-line="80" selection-end-column="35" />
+          <folding>
+            <element signature="e#350#466#0#PHP" expanded="true" />
+            <element signature="e#471#907#0#PHP" expanded="true" />
+            <element signature="e#644#660#1#PHP" expanded="true" />
+            <element signature="e#731#747#1#PHP" expanded="true" />
+            <element signature="e#913#1127#0#PHP" expanded="true" />
+            <element signature="e#1132#1571#0#PHP" expanded="true" />
+            <element signature="e#1545#1563#1#PHP" expanded="true" />
+            <element signature="e#1577#1835#0#PHP" expanded="true" />
+            <element signature="e#2125#2143#1#PHP" expanded="true" />
+            <element signature="e#2156#2420#0#PHP" expanded="true" />
+            <element signature="e#2425#2718#0#PHP" expanded="true" />
+            <element signature="e#2692#2710#1#PHP" expanded="true" />
+            <element signature="e#2723#2987#0#PHP" expanded="true" />
+            <element signature="e#2992#3286#0#PHP" expanded="true" />
+            <element signature="e#3260#3278#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/VehicleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.8">
+          <caret line="61" column="72" selection-start-line="61" selection-start-column="72" selection-end-line="61" selection-end-column="72" />
+          <folding>
+            <element signature="e#328#376#0#PHP" expanded="true" />
+            <element signature="e#426#624#0#PHP" expanded="true" />
+            <element signature="e#629#1450#0#PHP" expanded="true" />
+            <element signature="e#771#790#1#PHP" expanded="true" />
+            <element signature="e#883#902#1#PHP" expanded="true" />
+            <element signature="e#1287#1306#1#PHP" expanded="true" />
+            <element signature="e#1362#1387#0#PHP" expanded="true" />
+            <element signature="e#1456#1588#0#PHP" expanded="true" />
+            <element signature="e#2100#2107#0#PHP" expanded="true" />
+            <element signature="e#2184#2207#0#PHP" expanded="true" />
+            <element signature="e#2317#2447#0#PHP" expanded="true" />
+            <element signature="e#2452#2731#0#PHP" expanded="true" />
+            <element signature="e#2590#2614#0#PHP" expanded="true" />
+            <element signature="e#2737#2900#0#PHP" expanded="true" />
+            <element signature="e#2905#3753#0#PHP" expanded="true" />
+            <element signature="e#3476#3483#0#PHP" expanded="true" />
+            <element signature="e#3560#3584#0#PHP" expanded="true" />
+            <element signature="e#3759#3883#0#PHP" expanded="true" />
+            <element signature="e#3888#4348#0#PHP" expanded="true" />
+            <element signature="e#4332#4340#1#PHP" expanded="true" />
+            <element signature="e#4354#4532#0#PHP" expanded="true" />
+            <element signature="e#4537#4799#0#PHP" expanded="true" />
+            <element signature="e#4680#4689#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/VehicleType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73194444">
+          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+          <folding>
+            <element signature="e#342#426#0#PHP" expanded="true" />
+            <element signature="e#2165#2341#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

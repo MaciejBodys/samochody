@@ -16,40 +16,42 @@ class VehicleType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $label = $builder->getOption('label', false);
+
         $builder
             ->add('name', null, [
-                    'label' => false,
+                    'label' => $label?'Nazwa pojazdu':false,
                     'attr' => ['placeholder' => 'Nazwa pojazdu']
                 ]
             )
             ->add('photoUrl', UrlType::class, [
-                    'label' => false,
+                    'label' => $label?'URL obrazka':false,
                     'attr' => ['placeholder' => 'Podaj adres URL obrazka']
                 ]
             )
             ->add('description', TextareaType::class, [
-                    'label' => false,
-                    'attr' => ['placeholder' => 'Podaj opis produktu']
+                    'label' => $label?'Opsi pojazdu':false,
+                    'attr' => ['placeholder' => 'Podaj opis pojazdu']
                 ]
             )
             ->add('brand', null, [
-                'label' => false,
+                'label' => $label?'Marka pojazdu':false,
                 'attr' => ['placeholder' => 'Marka pojazdu']
             ])
             ->add('engine', null, [
-                'label' => false,
+                'label' => $label?'Silnik pojazdu':false,
                 'attr' => ['placeholder' => 'Moc silnika']
             ])
             ->add('year', null, [
-                'label' => false,
+                'label' => $label?'Rok produkcji':false,
                 'attr' => ['placeholder' => 'Rok produkcji']
             ])
             ->add('amount', null, [
-                'label' => false,
+                'label' => $label?'Ilośc dostępnych pojazdów':false,
                 'attr' => ['placeholder' => 'Ilość dostępnych pojazdów']
             ])
             ->add('price', null, [
-                'label' => false,
+                'label' => $label?'Koszt wynajmu':false,
                 'attr' => ['placeholder' => 'Koszt wynajmu (jeden dzień)']
             ])
         ;

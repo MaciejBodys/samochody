@@ -25,7 +25,11 @@ class HireController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $hires = $em->getRepository('AppBundle:Hire')->findAll();
+        if ($this->isGranted('ROLE_ADMIN')) {
+            $hires = $em->getRepository('AppBundle:Hire')->findAll();
+        } else {
+            $hires = $em->getRepository('AppBundle:Hire')->findBy(['user' => $this->getUser()]);
+        }
 
         return $this->render('hire/index.html.twig', array(
             'hires' => $hires,
@@ -57,6 +61,69 @@ class HireController extends Controller
         $em->flush();
 
         $this->addFlash('Sukces', 'Pomyślnie złożyłeś zlecenie o wypożyczenie pojazd');
+
+        return $this->redirectToRoute('zamowienia_index');
+    }
+
+    /**
+     * Finds and displays a Hire entity.
+     *
+     * @Route("/oddane/{hire}", name="zamowienia_oddane")
+     * @Method("GET")
+     * @param Hire $hire
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @internal param $car
+     */
+    public function oddaneAction(Hire $hire)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $hire->setStatus('ODDANE');
+
+        $em->flush();
+
+        $this->addFlash('Sukces', 'Pomyślnie złożyłeś zlecenie o wypożyczenie pojazd');
+
+        return $this->redirectToRoute('zamowienia_index');
+    }
+    /**
+     * Finds and displays a Hire entity.
+     *
+     * @Route("/anulowane/{hire}", name="zamowienia_anulowane")
+     * @Method("GET")
+     * @param Hire $hire
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @internal param $car
+     */
+    public function anulowaneAction(Hire $hire)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $hire->setStatus('ANULOWANE');
+
+        $em->flush();
+        $this->addFlash('Sukces', 'Pomyślnie zmieniłeś status');
+
+        return $this->redirectToRoute('zamowienia_index');
+    }
+    /**
+     * Finds and displays a Hire entity.
+     *
+     * @Route("/zaplacone/{hire}", name="zamowienia_zaplacone")
+     * @Method("GET")
+     * @param Hire $hire
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     * @internal param $car
+     */
+    public function zaplaconeAction(Hire $hire)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $hire->setStatus('ZAPŁACONE');
+
+        $em->flush();
+
+        $this->addFlash('Sukces', 'Pomyślnie zmieniłeś status');
 
         return $this->redirectToRoute('zamowienia_index');
     }

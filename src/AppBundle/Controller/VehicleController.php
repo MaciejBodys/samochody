@@ -21,12 +21,29 @@ class VehicleController extends Controller
      *
      * @Route("/", name="_index")
      * @Method("GET")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $vehicles = $em->getRepository('AppBundle:Vehicle')->findAll();
+
+        if ($request->get('s')) {
+
+            $vehicles = $em->getRepository('AppBundle:Vehicle')->createQueryBuilder('v')
+                ->where('v.name LIKE :name')
+                ->setParameter('name', '%'.$request->get('s').'%')
+                ->getQuery()->execute();
+        }
+
+        if (count($vehicles) < 1) {
+            $this->addFlash('Nie znaleziono', 'Nie znaleziono żadnego pojazdu o takiej nazwie. Spróbuj ponownie');
+            $vehicles = $em->getRepository('AppBundle:Vehicle')->findAll();
+
+        }
+
 
         return $this->render('vehicle/index.html.twig', array(
             'vehicles' => $vehicles,
@@ -42,7 +59,7 @@ class VehicleController extends Controller
     public function newAction(Request $request)
     {
         $vehicle = new Vehicle();
-        $form = $this->createForm('AppBundle\Form\VehicleType', $vehicle);
+        $form = $this->createForm('AppBundle\Form\VehicleType', $vehicle, ['label' => false]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -85,7 +102,7 @@ class VehicleController extends Controller
     public function editAction(Request $request, Vehicle $vehicle)
     {
         $deleteForm = $this->createDeleteForm($vehicle);
-        $editForm = $this->createForm('AppBundle\Form\VehicleType', $vehicle);
+        $editForm = $this->createForm('AppBundle\Form\VehicleType', $vehicle, ['label' => true]);
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {

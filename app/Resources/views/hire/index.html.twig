@@ -39,7 +39,9 @@ STATUS ZAMÓWIENIA
                 <td>{{ hire.status }}</td>
                 {% if is_granted("ROLE_ADMIN") %}
                     <td>
-                        AKCJE
+                        <a href="{{ path('zamowienia_oddane', {'hire': hire.id}) }}">ODDANE</a> |
+                        <a href="{{ path('zamowienia_zaplacone', {'hire': hire.id}) }}">ZAPŁACONE</a> |
+                        <a href="{{ path('zamowienia_anulowane', {'hire': hire.id}) }}">ANULOWANE</a>
                     </td>
                 {% endif %}
             </tr>

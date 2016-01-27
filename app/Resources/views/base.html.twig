@@ -65,9 +65,8 @@
                         {% endfor %}
                         {% if loop.index0 == 0%}
                             <script>
-                            document.location.hash = 'openModal';
-
-                            setTimeout(function(){ document.location.hash = 'close'}, 1500);
+                                setTimeout(function(){ document.location.hash = 'openModal'; }, 100);
+                                setTimeout(function(){ document.location.hash = 'close'}, 2000);
                             </script>
                         {% endif %}
                     {% endfor %}
@@ -97,10 +96,10 @@
                     <div class="sidebar">
 
                         <div class="search-widget widget">
-                            <form class="widget-form" action="#" method="get" role="search">
+                            <form class="widget-form" action="{{ path('_index') }}" method="get" role="search">
                                 <label>
                                     <span class="screen-reader-text">Search this website:</span>
-                                    <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="search" title="Search" />
+                                    <input type="search" class="search-field" placeholder="Szukaj pojazdu &hellip;" value="" name="s" title="Szukaj" />
                                 </label>
                                 <button><i class="fa fa-search"></i></button>
                             </form>
@@ -109,11 +108,13 @@
                         <div class="widget">
                             <h3 class="widget-title">Panel{{ app.user?' - ' ~ app.user:'' }}</h3>
                             <ul>
+                                <li><a href="{{ path('_index') }}">Strona główna</a></li>
+
                                 {% if is_granted("ROLE_ADMIN") %}
                                     <li><a href="{{ path('_new') }}">Dodaj pojazd</a></li>
                                 {% endif %}
                                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                                <li><a href="{{ path('zamowienia_index') }}">Zamówienia</a></li>
+                                <li><a href="{{ path('zamowienia_index') }}">Zamówienia{% if is_granted('ROLE_ADMIN') %} - WSZYSTKIE{% endif %}</a></li>
                                 <li><a href="{{ path('fos_user_security_logout') }}">Wyloguj</a></li>
                                 {% else %}
                                 <li><a href="{{ path('fos_user_security_login') }}">Zaloguj</a></li>
