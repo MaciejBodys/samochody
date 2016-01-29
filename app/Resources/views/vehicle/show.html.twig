@@ -41,6 +41,7 @@
                 <p>{{ vehicle.description }}</p>
 
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    <p>Koszt (za dzień): <strong>{{ vehicle.price }} zł</strong> (płatność i formalności przy odbiorze)</p>
                     <a class="hire button" href="{{ path('zamowienia_hire', {'car': vehicle.name}) }}">WYPOŻYCZ</a>
 
                 {% else %}
