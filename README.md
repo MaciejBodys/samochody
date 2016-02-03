@@ -1,4 +1,4 @@
-Projekt wypożyczalni sklepów
+Projekt wypożyczalni samochodów
 =========
 
-Projekt wypożyczalni sklepów
+Projekt wypożyczalni samochodów
